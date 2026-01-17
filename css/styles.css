@@ -128,7 +128,7 @@
 
         /* Hero Section */
         .hero {
-            background-image: url('./images/zinnia - mockupd3.jpg');
+            background-image: url('../images/zinnia - mockupd3.jpg');
             background-size: cover;
             background-position: center;
             padding: 100px 50px;
@@ -139,7 +139,7 @@
             font-size: 48px;
             margin-bottom: 20px;
             letter-spacing: 2px;
-            font-weight: 300;
+            font-weight: 200;
         }
 
         .hero-buttons {
