@@ -182,17 +182,40 @@
             max-width: 1400px;
             margin: 0 auto;
         }
-            .collection-rosa {
-               background-color: #ffe4e9;
-               border-radius: 20px;  /* Esquinas redondeadas */
-               margin: 40px;
-               box-shadow: 0 4px 15px rgba(0,0,0,0.05);  /* Sombra suave */
-           }
-
+        
+        .collection-rosa {
+            background-color: #ffe4e9;
+            border-radius: 20px;
+            padding: 60px 40px;  /* Añade padding aquí */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        
+        .collection-verde {
+            background-color: #e8f5e9;
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        
+        .collection-mixta {
+            background-color: #fff9e6;
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        
+        .collection-azul {
+            background-color: #e3f2fd;
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        
         .collection-section h2 {
-            font-size: 32px;
+            font-size: 34px;
+            font-weight: 200;
             margin-bottom: 50px;
-            text-align: center;
+            text-align: left;
             letter-spacing: 2px;
             text-transform: uppercase;
         }
