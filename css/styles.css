@@ -1,5 +1,5 @@
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@100;200;300;400;500;600;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@100;200;300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@50;100;200;300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@50;100;200;300;400;500;600;700&display=swap');
         * {
             margin: 0;
             padding: 0;
@@ -85,10 +85,10 @@
 
         .logo {
             font-family: 'Cormorant', serif;
-            font-size: 44px;
+            font-size: 38px;
             font-weight: 100;
             letter-spacing: 8px;
-            color: #ECEDE4;
+            color: #EFDBE8;
             text-decoration: none;
         }
 
@@ -321,7 +321,7 @@
         }
 
         .footer-section a {
-            color: #666;
+            color: #999;
             text-decoration: none;
             transition: color 0.3s;
             font-weight: 200;
