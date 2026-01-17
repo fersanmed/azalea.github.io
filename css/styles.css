@@ -75,7 +75,7 @@
         .search-icon {
             background: none;
             border: none;
-            color: #CDCFC2;
+            color: #ECEDE4;
             font-size: 20px;
             cursor: pointer;
             transition: opacity 0.3s;
@@ -86,10 +86,10 @@
 
         .logo {
             font-family: 'Cormorant', serif;
-            font-size: 48px;
+            font-size: 44px;
             font-weight: 100;
             letter-spacing: 8px;
-            color: #CDCFC2;
+            color: #ECEDE4;
             text-decoration: none;
         }
 
@@ -104,17 +104,17 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #CDCFC2;
-            font-size: 26px;
+            color: #ECEDE4;
+            font-size: 15px;
             text-transform: uppercase;
             letter-spacing: 2px;
             transition: opacity 0.3s;
             font-family: 'Quicksand', sans-serif;
-            font-weight: 200;
+            font-weight: 100;
         }
 
         .nav-links a:hover {
-            color: #c97b84;
+            color: #FFFFFF;
         }
 
         .nav-icons {
@@ -302,11 +302,11 @@
         }
 
         .footer-section h3 {
-            font-size: 35px;
+            font-size: 25px;
             font-weight: 100;
             margin-bottom: 20px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
 
         .footer-section ul {
@@ -323,7 +323,9 @@
             text-decoration: none;
             transition: color 0.3s;
             font-weight: 200;
+            font-size: 20
             font-family: 'Quicksand', sans-serif;
+            letter-spacing: 1px;
         }
 
         .footer-section a:hover {
