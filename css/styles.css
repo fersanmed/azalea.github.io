@@ -375,79 +375,129 @@
              color: #666;
          }
 
-        /* Mobile Menu */
+        /* Mobile Menu Button - Las 3 barras */
         .mobile-menu-btn {
             display: none;
             background: none;
             border: none;
-            font-size: 24px;
             cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+            padding: 10px;
+            z-index: 1001;
         }
-
-/* Mobile Menu */
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
+        
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            display: block;
+            transition: all 0.3s;
+        }
+        
+        @media (max-width: 768px) {
+            /* Mostrar botón hamburguesa */
+            .mobile-menu-btn {
+                display: flex;
+                position: absolute;
+                left: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        
+            /* Ajustar grid para móvil */
+            .nav-top {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px 20px;
+                position: relative;
+            }
+        
+            /* Logo centrado */
+            .logo {
+                font-size: 28px;
+                letter-spacing: 4px;
+            }
+        
+            /* Ocultar iconos en móvil (opcional) */
+            .nav-icons {
+                display: none;
+            }
+        
+            /* Ocultar búsqueda en móvil (opcional) */
+            .search-icon {
+                display: none;
+            }
+        
+            /* Menú desplegable */
+            .nav-bottom {
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+        
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                background: #B5759C;
+                padding: 0;
+                gap: 0;
+                margin: 0;
+            }
+        
+            .nav-links li {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+        
+            .nav-links a {
+                display: block;
+                padding: 15px 20px;
+                font-size: 14px;
+            }
+        
+            /* Cuando está activo */
+            .nav-bottom.active {
+                max-height: 300px;
+            }
+        
+            /* Animación del botón hamburguesa */
+            .mobile-menu-btn.active span:nth-child(1) {
+                transform: rotate(45deg) translate(7px, 7px);
+            }
+        
+            .mobile-menu-btn.active span:nth-child(2) {
+                opacity: 0;
+            }
+        
+            .mobile-menu-btn.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+        
+            /* Resto de ajustes móvil */
+            .hero {
+                padding: 60px 20px;
+            }
+        
+            .hero h1 {
+                font-size: 28px;
+            }
+        
+            .collection-section h2,
+            .collection-section .products-grid {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        
+            .products-grid {
+                grid-template-columns: 1fr;
+                margin-bottom: 40px;
+                gap: 20px;
+            }
+        
+            .hero-buttons {
+                flex-direction: column;
+            }
 }
-
-@media (max-width: 768px) {
-    .nav-top {
-        padding: 15px 20px;
-    }
-
-    .nav-bottom {
-        padding: 0;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: #B5759C;
-        padding: 20px;
-        gap: 20px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-        position: absolute;
-        left: 20px;
-    }
-
-    .logo {
-        font-size: 32px;
-    }
-
-    .hero {
-        padding: 60px 20px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .collection-section h2,
-    .collection-section .products-grid {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .products-grid {
-        grid-template-columns: 1fr;
-        margin-bottom: 40px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-}
-
