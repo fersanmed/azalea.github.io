@@ -1,5 +1,6 @@
  <style>
         @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@100;200;300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@100;200;300;400;500;600;700&display=swap');
         * {
             margin: 0;
             padding: 0;
@@ -65,6 +66,8 @@
         
         .nav-bottom {
             padding: 15px 50px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 200;
             display: flex;
             justify-content: center;
         }
@@ -148,6 +151,7 @@
             gap: 20px;
             justify-content: center;
             margin-top: 40px;
+            font-family: 'Quicksand', sans-serif;
         }
 
         .btn {
@@ -335,6 +339,8 @@
             border-top: 1px solid #ddd;
             color: #666;
             font-size: 14px;
+            font-family: 'Quicksand', sans-serif;
+         
         }
 
         .payment-icons {
@@ -352,6 +358,11 @@
             border: 1px solid #ddd;
             border-radius: 3px;
         }
+        .payment-icons i {
+             font-size: 32px;
+             margin: 0 10px;
+             color: #666;
+         }
 
         /* Mobile Menu */
         .mobile-menu-btn {
