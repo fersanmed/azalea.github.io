@@ -177,46 +177,51 @@
             background: #555;
         }
 
-         /* Collections */
-         .collection-section {
-             padding: 80px 0;  /* Sin padding lateral aquí */
-         }
-         
-         /* Wrapper interior para mantener el contenido centrado */
-         .collection-section h2,
-         .collection-section .products-grid {
-             max-width: 1400px;
-             margin-left: auto;
-             margin-right: auto;
-             padding-left: 50px;
-             padding-right: 50px;
-         }
-         
-         .collection-rosa {
-             background-color: #ffe4e9;
-         }
-         
-         .collection-verde {
-             background-color: #e8f5e9;
-         }
-         
-         .collection-mixta {
-             background-color: #fff9e6;
-         }
-         
-         .collection-azul {
-             background-color: #e3f2fd;
-         }
-         
-         .collection-section h2 {
-             font-size: 34px;
-             font-weight: 200;
-             margin-bottom: 50px;
-             text-align: left;
-             letter-spacing: 2px;
-             text-transform: uppercase;
-             padding-top: 60px;  /* Espacio arriba */
-         }
+        /* Collections */
+        .collection-section {
+            padding: 80px 0;
+            width: 100%;  /* Añade esto para forzar ancho completo */
+        }
+        
+        /* Wrapper interior para mantener el contenido centrado */
+        .collection-section h2,
+        .collection-section .products-grid {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        
+        .collection-section.collection-rosa {
+            background-color: #ffe4e9;
+        }
+        
+        .collection-section.collection-verde {
+            background-color: #e8f5e9;
+        }
+        
+        .collection-section.collection-mixta {
+            background-color: #fff9e6;
+        }
+        
+        .collection-section.collection-azul {
+            background-color: #e3f2fd;
+        }
+        
+        .collection-section h2 {
+            font-size: 34px;
+            font-weight: 200;
+            margin-bottom: 50px;
+            text-align: left;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding-top: 60px;
+        }
+        
+        .products-grid {
+            padding-bottom: 60px;
+        }
          
          .products-grid {
              padding-bottom: 60px;  /* Espacio abajo */
