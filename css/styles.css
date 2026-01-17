@@ -183,7 +183,7 @@
 
         /* Collections */
         .collection-section {
-            padding: 80px 0;
+            padding: 40px 0;
             width: 100%;  /* Añade esto para forzar ancho completo */
         }
         
@@ -198,19 +198,19 @@
         }
         
         .collection-section.collection-rosa {
-            background-color: #ffe4e9;
+            background-color: #efece5;
         }
         
         .collection-section.collection-verde {
-            background-color: #e8f5e9;
+            background-color: #cdcfc2;
         }
         
         .collection-section.collection-mixta {
-            background-color: #fff9e6;
+            background-color: #efece5;
         }
         
         .collection-section.collection-azul {
-            background-color: #e3f2fd;
+            background-color: #cdcfc2;
         }
         
         .collection-section h2 {
@@ -311,6 +311,8 @@
 
         .footer-section ul {
             list-style: none;
+            padding-left: 0;
+            margin-left: 0;
         }
 
         .footer-section ul li {
