@@ -177,50 +177,50 @@
             background: #555;
         }
 
-        /* Collections */
-        .collection-section {
-            padding: 80px 50px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .collection-rosa {
-            background-color: #ffe4e9;
-            border-radius: 20px;
-            padding: 60px 40px;  /* Añade padding aquí */
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        
-        .collection-verde {
-            background-color: #e8f5e9;
-            border-radius: 20px;
-            padding: 60px 40px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        
-        .collection-mixta {
-            background-color: #fff9e6;
-            border-radius: 20px;
-            padding: 60px 40px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        
-        .collection-azul {
-            background-color: #e3f2fd;
-            border-radius: 20px;
-            padding: 60px 40px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        
-        .collection-section h2 {
-            font-size: 34px;
-            font-weight: 200;
-            margin-bottom: 50px;
-            text-align: left;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
+         /* Collections */
+         .collection-section {
+             padding: 80px 0;  /* Sin padding lateral aquí */
+         }
+         
+         /* Wrapper interior para mantener el contenido centrado */
+         .collection-section h2,
+         .collection-section .products-grid {
+             max-width: 1400px;
+             margin-left: auto;
+             margin-right: auto;
+             padding-left: 50px;
+             padding-right: 50px;
+         }
+         
+         .collection-rosa {
+             background-color: #ffe4e9;
+         }
+         
+         .collection-verde {
+             background-color: #e8f5e9;
+         }
+         
+         .collection-mixta {
+             background-color: #fff9e6;
+         }
+         
+         .collection-azul {
+             background-color: #e3f2fd;
+         }
+         
+         .collection-section h2 {
+             font-size: 34px;
+             font-weight: 200;
+             margin-bottom: 50px;
+             text-align: left;
+             letter-spacing: 2px;
+             text-transform: uppercase;
+             padding-top: 60px;  /* Espacio arriba */
+         }
+         
+         .products-grid {
+             padding-bottom: 60px;  /* Espacio abajo */
+         }
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
