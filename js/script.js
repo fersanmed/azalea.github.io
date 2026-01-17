@@ -24,3 +24,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+function verMasProductos(button) {
+    const grid = button.previousElementSibling;
+    grid.classList.add('expanded');
+    button.style.display = 'none';
+}
