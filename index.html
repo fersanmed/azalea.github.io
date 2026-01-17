@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZALEA - Studio Art</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            border-bottom: 1px solid #e5e5e5;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .top-bar {
+            background: #f8f8f8;
+            padding: 8px 0;
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #c97b84;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-icons button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f5e6d3 0%, #d4a5a5 100%);
+            padding: 100px 50px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            border: 2px solid #333;
+            background: white;
+            color: #333;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #333;
+            color: white;
+        }
+
+        .btn-dark {
+            background: #333;
+            color: white;
+        }
+
+        .btn-dark:hover {
+            background: #555;
+        }
+
+        /* Collections */
+        .collection-section {
+            padding: 80px 50px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .collection-section h2 {
+            font-size: 32px;
+            margin-bottom: 50px;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .product-card {
+            position: relative;
+            overflow: hidden;
+            background: white;
+            border: 1px solid #e5e5e5;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .product-price {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .sold-out {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #000;
+            color: white;
+            padding: 8px 15px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+        footer {
+            background: #f8f8f8;
+            padding: 60px 50px 30px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #333;
+        }
+
+        .newsletter input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .payment-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .payment-icons span {
+            font-size: 12px;
+            padding: 5px 10px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 20px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .collection-section {
+                padding: 40px 20px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        PARA ENCARGOS PERSONALIZADOS, CLICK AQUI
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <a href="#" class="logo">AZALEA</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#colecciones">COLECCIONES</a></li>
+                <li><a href="#productos">PRODUCTOS</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button>🔍</button>
+                <button>👤</button>
+                <button>🛒</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <h1>COLECCIÓN CAMELIA YA DISPONIBLE</h1>
+        <p>Te damos la bienvenida a nuestra tienda</p>
+        <div class="hero-buttons">
+            <a href="#productos" class="btn btn-dark">DESCÚBRELA</a>
+            <a href="#encargos" class="btn">ENCARGOS</a>
+        </div>
+    </section>
+
+    <!-- Colección Rosa -->
+    <section class="collection-section" id="colecciones">
+        <h2>COLECCIÓN ROSA</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_41.png?v=1765904455&width=533" alt="ZINNIA" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">ZINNIA</div>
+                    <div class="product-price">€200,00 EUR</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://azalea-studio-art.com/cdn/shop/files/MOCKUPSESPACIOS.png?v=1759251882&width=533" alt="LIRIO" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">LIRIO</div>
+                    <div class="product-price">€750,00 EUR</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://azalea-studio-art.com/cdn/shop/files/Disenosintitulo_46.png?v=1759418714&width=533" alt="DALIA" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">DALIA</div>
+                    <div class="product-price">€200,00 EUR</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://azalea-studio-art.com/cdn/shop/files/Elsa_Schiaparelli_Italian_fashion_designer_brought_the_ideas_of_surrealist_painters_into_fashion_and_in_1931_introduced_a_new_color_shocking_pink_a_blend_of_magenta_with_a_touch_of_wh.png?v=1765481958&width=533" alt="ADELFA" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">ADELFA</div>
+                    <div class="product-price">€300,00 EUR</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Colección Verde -->
+        <h2>COLECCIÓN VERDE</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="sold-out">AGOTADO</div>
+                <img src="https://azalea-studio-art.com/cdn/shop/files/8C7A4976-E68D-473F-9B04-5899C9BDAEDB.png?v=1765906192&width=533" alt="MY HOME" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">MY HOME</div>
+                    <div class="product-price">€0,00 EUR</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="sold-out">AGOTADO</div>
+                <img src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_png.png?v=1765476993&width=533" alt="NEBULA" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">NEBULA</div>
+                    <div class="product-price">€200,00 EUR</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_1.jpg?v=1765476715&width=533" alt="GUZMANIA" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">GUZMANIA</div>
+                    <div class="product-price">€250,00 EUR</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Colección Mixta -->
+        <h2>COLECCIÓN MIXTA</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://azalea-studio-art.com/cdn/shop/files/Sintitulo-1.jpg?v=1765910911&width=533" alt="HORIZON" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">HORIZON</div>
+                    <div class="product-price">€200,00 EUR</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="sold-out">AGOTADO</div>
+                <img src="https://azalea-studio-art.com/cdn/shop/files/PHOTO-2025-11-09-17-59-23.jpg?v=1765903924&width=533" alt="IPOMEA" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">IPOMEA</div>
+                    <div class="product-price">€400,00 EUR</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://azalea-studio-art.com/cdn/shop/files/Disenosintitulo.jpg?v=1765475925&width=533" alt="ANDROMEDA" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">ANDROMEDA</div>
+                    <div class="product-price">€500,00 EUR</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Colección Azul -->
+        <h2>COLECCIÓN AZUL</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://azalea-studio-art.com/cdn/shop/files/6633A9D3-6BDE-4930-9167-49DB798DB978.png?v=1765907719&width=533" alt="WORLD" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">WORLD</div>
+                    <div class="product-price">€400,00 EUR</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://azalea-studio-art.com/cdn/shop/files/1BAC2E6F-0299-4EB6-8190-62006FE0CF0D.jpg?v=1765906867&width=533" alt="WALL" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">WALL</div>
+                    <div class="product-price">€500,00 EUR</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="sold-out">AGOTADO</div>
+                <img src="https://azalea-studio-art.com/cdn/shop/files/D4B497B1-8A76-4B27-A5FF-48FE7E10063F.png?v=1765904786&width=533" alt="DOOR" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">DOOR</div>
+                    <div class="product-price">€200,00 EUR</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AYUDA</h3>
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>INFORMACIÓN</h3>
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>SUBSCRÍBETE A NUESTRO CORREO</h3>
+                <input type="email" placeholder="Introduce tu correo">
+            </div>
+        </div>
+
+        <div class="payment-icons">
+            <span>💳 American Express</span>
+            <span>🍎 Apple Pay</span>
+            <span>💳 Mastercard</span>
+            <span>💳 Visa</span>
+            <span>💰 PayPal</span>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026, AZALEA | Tecnología de tu propio servidor</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth scroll para los enlaces
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Cerrar menú móvil al hacer click en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
