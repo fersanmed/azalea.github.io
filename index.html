@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AZALEA - Studio Art</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&display=swap');
         * {
             margin: 0;
             padding: 0;
@@ -19,8 +20,8 @@
 
         /* Header */
         header {
-            background: white;
-            border-bottom: 1px solid #e5e5e5;
+            background: #c97b9e;
+            border-bottom: none;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -28,32 +29,57 @@
         }
 
         .top-bar {
-            background: #f8f8f8;
+            background: #EFECE5;
             padding: 8px 0;
             text-align: center;
             font-size: 13px;
-            color: #666;
+            color: #121212;
         }
         .top-bar a {
-            color: #666;
+            font-family: 'Cormorant', serif;
+            color: #121212;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 400;
         }
 
         nav {
+            padding: 0;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .nav-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 50px;
-            max-width: 1400px;
-            margin: 0 auto;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .nav-bottom {
+            padding: 15px 50px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .search-icon {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        .search-icon:hover {
+            opacity: 0.7;
         }
 
         .logo {
-            font-size: 28px;
-            font-weight: bold;
-            letter-spacing: 3px;
-            color: #000;
+            font-family: 'Cormorant', serif;
+            font-size: 36px;
+            font-weight: 400;
+            letter-spacing: 8px;
+            color: white;
             text-decoration: none;
         }
 
@@ -61,15 +87,19 @@
             display: flex;
             gap: 40px;
             list-style: none;
+            font-family: 'Cormorant', serif;
+            margin: 0;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
-            font-size: 14px;
+            color: white;
+            font-family: 'Cormorant', serif;
+            font-size: 16px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s;
+            letter-spacing: 2px;
+            transition: opacity 0.3s;
+            font-weight: 400;
         }
 
         .nav-links a:hover {
@@ -335,31 +365,36 @@
     </style>
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <a href="#encargos">PARA ENCARGOS PERSONALIZADOS, CLICK AQUÍ</a>
-    </div>
-
 
     <!-- Header -->
     <header>
         <nav>
-            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-            <a href="#" class="logo">AZALEA</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#inicio">INICIO</a></li>
-                <li><a href="#colecciones">COLECCIONES</a></li>
-                <li><a href="#productos">PRODUCTOS</a></li>
-                <li><a href="#contacto">CONTACTO</a></li>
-            </ul>
-            <div class="nav-icons">
-                <button>🔍</button>
-                <button>👤</button>
-                <button>🛒</button>
+            <div class="nav-top">
+                <button class="search-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <a href="#" class="logo">AZALEA</a>
+                </div>
+            </div>
+            <div class="nav-bottom">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#inicio">INICIO</a></li>
+                    <li><a href="#colecciones">COLECCIONES</a></li>
+                    <li><a href="#productos">PRODUCTOS</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                </ul>
             </div>
         </nav>
     </header>
 
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <a href="#encargos">PARA ENCARGOS PERSONALIZADOS, CLICK AQUÍ</a>
+    </div>
+    
     <!-- Hero Section -->
     <section class="hero" id="inicio">
         <h1>COLECCIÓN CAMELIA YA DISPONIBLE</h1>
