@@ -384,50 +384,70 @@
             cursor: pointer;
         }
 
-        @media (max-width: 768px) {
-            nav {
-                padding: 20px;
-            }
+/* Mobile Menu */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
 
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            }
+@media (max-width: 768px) {
+    .nav-top {
+        padding: 15px 20px;
+    }
 
-            .nav-links.active {
-                display: flex;
-            }
+    .nav-bottom {
+        padding: 0;
+    }
 
-            .mobile-menu-btn {
-                display: block;
-            }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #B5759C;
+        padding: 20px;
+        gap: 20px;
+    }
 
-            .hero {
-                padding: 60px 20px;
-            }
+    .nav-links.active {
+        display: flex;
+    }
 
-            .hero h1 {
-                font-size: 32px;
-            }
+    .mobile-menu-btn {
+        display: block;
+        position: absolute;
+        left: 20px;
+    }
 
-            .collection-section {
-                padding: 40px 20px;
-            }
+    .logo {
+        font-size: 32px;
+    }
 
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
+    .hero {
+        padding: 60px 20px;
+    }
 
-            .hero-buttons {
-                flex-direction: column;
-            }
+    .hero h1 {
+        font-size: 32px;
+    }
 
-        }
+    .collection-section h2,
+    .collection-section .products-grid {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        margin-bottom: 40px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
 
