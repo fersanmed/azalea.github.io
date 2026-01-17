@@ -437,6 +437,42 @@
                 overflow: hidden;
                 transition: max-height 0.3s ease;
             }
+
+                /* Ocultar productos extra en móvil */
+                @media (max-width: 768px) {
+                    .product-card:nth-child(n+5) {
+                        display: none;
+                    }
+                    
+                    .products-grid.expanded .product-card {
+                        display: block;
+                    }
+                }
+                
+                /* Botón Ver más */
+                .ver-mas-btn {
+                    display: none;
+                    width: 100%;
+                    padding: 15px 30px;
+                    margin: 20px auto;
+                    background: #333;
+                    color: white;
+                    border: none;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    font-family: 'Quicksand', sans-serif;
+                }
+                
+                @media (max-width: 768px) {
+                    .ver-mas-btn {
+                        display: block;
+                    }
+                    
+                    .ver-mas-btn.hidden {
+                        display: none;
+                    }
+                }
         
             .nav-links {
                 display: flex;
