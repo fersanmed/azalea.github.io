@@ -75,7 +75,7 @@
         .search-icon {
             background: none;
             border: none;
-            color: white;
+            color: #CDCFC2;
             font-size: 20px;
             cursor: pointer;
             transition: opacity 0.3s;
@@ -89,7 +89,7 @@
             font-size: 48px;
             font-weight: 100;
             letter-spacing: 8px;
-            color: white;
+            color: #CDCFC2;
             text-decoration: none;
         }
 
@@ -104,13 +104,13 @@
 
         .nav-links a {
             text-decoration: none;
-            color: white;
-            font-family: 'Cormorant', serif;
+            color: #CDCFC2;
             font-size: 16px;
             text-transform: uppercase;
             letter-spacing: 2px;
             transition: opacity 0.3s;
-            font-weight: 400;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 200;
         }
 
         .nav-links a:hover {
