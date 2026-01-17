@@ -371,5 +371,11 @@
             .hero-buttons {
                 flex-direction: column;
             }
+            .collection-rosa {
+               background-color: #ffe4e9;
+               border-radius: 20px;  /* Esquinas redondeadas */
+               margin: 40px;
+               box-shadow: 0 4px 15px rgba(0,0,0,0.05);  /* Sombra suave */
+           }
         }
     </style>
