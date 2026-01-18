@@ -639,10 +639,13 @@
         .producto-galeria {
             position: sticky;
             top: 120px;
+                max-width: 600px;     /* ← Limita el ancho máximo */
+            margin: 0 auto;       /* ← Centra horizontalmente */
         }
         
+        
         .imagen-principal {
-            width: 100%;
+            width: 500px;
             margin-bottom: 15px;
             overflow: hidden;
             position: relative;
