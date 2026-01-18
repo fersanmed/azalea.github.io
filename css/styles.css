@@ -655,10 +655,10 @@
             border: 1px solid #e5e5e5;
         }
         .imagen-principal img {
-            width: 550px !important;
+            width: 100% !important;
             height: 550px !important;
             display: block !important;
-            object-fit: contain !important;
+            object-fit: cover !important;
         }
         
         /* Lupa elegante en esquina */
