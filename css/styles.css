@@ -968,6 +968,7 @@
         
         .desplegable {
             border-bottom: 1px solid #e5e5e5;
+            color: #999;
         }
         
         .desplegable-header {
@@ -995,6 +996,7 @@
         
         .desplegable-header span {
             transition: color 0.3s;
+            color: #999;
         }
         
         .desplegable-header i {
