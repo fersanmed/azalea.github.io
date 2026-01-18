@@ -48,25 +48,25 @@
     <!-- Contenido del producto -->
     <main class="producto-page">
         <div class="producto-container">
-            <!-- Galería de imágenes -->
-            <div class="producto-galeria">
-                <div class="imagen-principal" onclick="ampliarImagen()">
-                    <img id="imagenPrincipal" src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_41.png?v=1765904455&width=533" alt="ZINNIA">
-                    <div class="zoom-icon">🔍</div>
-                </div>
-                <div class="imagenes-miniaturas">
-                    <img src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_41.png?v=1765904455&width=533" alt="ZINNIA vista 1" onclick="cambiarImagen(this)" class="active">
-                    <img src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_41.png?v=1765904455&width=533" alt="ZINNIA vista 2" onclick="cambiarImagen(this)">
-                    <img src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_41.png?v=1765904455&width=533" alt="ZINNIA detalle" onclick="cambiarImagen(this)">
-                </div>
+            
+    <!-- Galería de imágenes -->
+        <div class="producto-galeria">
+            <div class="imagen-principal" onclick="ampliarImagen()">
+                <img id="imagenPrincipal" src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_41.png?v=1765904455&width=1200" alt="ZINNIA">
+                <div class="zoom-icon"></div>
             </div>
-
-            <!-- Modal para ampliar imagen -->
-            <div id="modalImagen" class="modal-imagen" onclick="cerrarModal()">
-                <span class="cerrar-modal">&times;</span>
-                <img id="imagenAmpliada" src="" alt="Imagen ampliada">
+            <div class="imagenes-miniaturas">
+                <img src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_41.png?v=1765904455&width=533" alt="ZINNIA vista 1" onclick="cambiarImagen(this)" class="active">
+                <img src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_41.png?v=1765904455&width=533" alt="ZINNIA vista 2" onclick="cambiarImagen(this)">
+                <img src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_41.png?v=1765904455&width=533" alt="ZINNIA detalle" onclick="cambiarImagen(this)">
             </div>
-
+        </div>
+        
+        <!-- Modal para ampliar imagen -->
+        <div id="modalImagen" class="modal-imagen" onclick="cerrarModal()">
+            <span class="cerrar-modal">&times;</span>
+            <img id="imagenAmpliada" src="" alt="Imagen ampliada">
+        </div>
             <!-- Información del producto -->
             <div class="producto-info">
                 <p class="producto-coleccion">AZALEA</p>
