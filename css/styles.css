@@ -1344,3 +1344,34 @@
         width: 100%;
     }
 }
+
+/* ======================================== PÁGINA DE PRODUCTOS   ======================================== */
+
+  
+.productos-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 50px;
+}
+
+.productos-container h1 {
+    font-family: 'Cormorant', serif;
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .productos-page {
+        padding: 40px 20px;
+    }
+
+    .productos-container h1 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+}
