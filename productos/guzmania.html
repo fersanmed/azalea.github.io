@@ -1,1 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUZMANIA - AZALEA</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="nav-top">
+                <button class="mobile-menu-btn" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <button class="search-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                
+                <a href="../index.html" class="logo">AZALEA</a>
+                
+            </div>
+            
+            <div class="nav-bottom">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="../colecciones.html">COLECCIONES</a></li>
+                    <li><a href="../productos.html">PRODUCTOS</a></li>
+                    <li><a href="../contacto.html">CONTACTO</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
+    <!-- Banner encargos -->
+    <div class="top-bar">
+        <a href="#encargos">PARA ENCARGOS PERSONALIZADOS, CLICK AQUÍ</a>
+    </div>
+
+    <!-- Contenido del producto -->
+    <main class="producto-page">
+        <div class="producto-container">
+            
+    <!-- Galería de imágenes -->
+        <div class="producto-galeria">
+            <div class="imagen-principal" onclick="ampliarImagen()">
+                <img id="imagenPrincipal" src="../images/guzmania/guzmania.jpg" alt="ZINNIA">
+                <div class="zoom-icon"></div>
+                
+            </div>
+            <div class="imagenes-miniaturas">
+                <img src="../images/guzmania/Guzmania.jpg" alt="GUZMANIA vista 1" onclick="cambiarImagen(this)" class="active">
+                <img src="../images/guzmania/Guzmania 90X60.jpg" alt="GUZMANIA vista 2" onclick="cambiarImagen(this)">
+            </div>
+        </div>
+        
+        <!-- Modal para ampliar imagen -->
+        <div id="modalImagen" class="modal-imagen" onclick="cerrarModal()">
+            <span class="cerrar-modal">&times;</span>
+            <img id="imagenAmpliada" src="" alt="Imagen ampliada">
+        </div>
+            <!-- Información del producto -->
+            <div class="producto-info">
+                <p class="producto-coleccion">AZALEA</p>
+                <h1 class="producto-titulo">GUZMANIA</h1>
+                <p class="producto-precio">€250,00 EUR</p>
+                <p class="producto-impuestos">Impuestos incluidos.</p>
+
+                <!-- Selector de cantidad -->
+                <div class="cantidad-selector">
+                    <label>Cantidad</label>
+                    <div class="cantidad-controls">
+                        <button onclick="decrementarCantidad()">−</button>
+                        <input type="number" id="cantidad" value="1" min="1" readonly>
+                        <button onclick="incrementarCantidad()">+</button>
+                    </div>
+                </div>
+
+                <!-- Botones de compra -->
+                <div class="producto-botones">
+                    <button class="btn-agregar-carrito">
+                        <span>Agregar al carrito</span>
+                    </button>
+                    <button class="btn-paypal">
+                        <svg width="80" height="20" viewBox="0 0 100 32" xmlns="http://www.w3.org/2000/svg">
+                            <text x="5" y="22" fill="currentColor" font-family="Verdana" font-size="18" font-weight="bold">Pay</text>
+                            <text x="40" y="22" fill="#009cde" font-family="Verdana" font-size="18" font-weight="bold">Pal</text>
+                        </svg>
+                    </button>
+                    <button class="link-mas-opciones">Más opciones de pago</button>
+                </div>
+
+                <!-- Desplegables de información -->
+                <div class="producto-desplegables">
+                    <!-- Descripción -->
+                    <div class="desplegable">
+                        <button class="desplegable-header" onclick="toggleDesplegable(this)">
+                            <span>DESCRIPCIÓN</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="desplegable-content">
+                            <p>Obra pintada en tonos verdes con un toque naranja que transmite calma y conexión con la naturaleza, perfecta para aportar frescura a cualquier espacio.</p>
+                            <p><strong>Pintado en Córdoba, España.</strong></p>
+                        </div>
+                    </div>
+
+                    <!-- Tamaño -->
+                    <div class="desplegable">
+                        <button class="desplegable-header" onclick="toggleDesplegable(this)">
+                            <span>TAMAÑO</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="desplegable-content">
+                            <p><strong>Dimensiones:</strong> 90 x 60 cm</p>
+                            <p><strong>Soporte:</strong> Lienzo sobre bastidor de madera</p>
+                            <p>El tamaño del lienzo que se muestra no incluye el marco.</p>
+                            <p>Añadir un marco aumentará ligeramente las dimensiones totales.</p>
+                        </div>
+                    </div>
+
+                    <!-- Marco -->
+                    <div class="desplegable">
+                        <button class="desplegable-header" onclick="toggleDesplegable(this)">
+                            <span>MARCO</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="desplegable-content">
+                            <p><strong>Marco incluido:</strong> Marco de madera natural</p>
+                            <p>El marco viene instalado y listo para colgar.</p>
+                        </div>
+                    </div>
+
+                    <!-- Compartir -->
+                    <div class="desplegable">
+                        <button class="desplegable-header" onclick="toggleDesplegable(this)">
+                            <span>Compartir</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="desplegable-content">
+                            <div class="compartir-botones">
+                                <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-btn"><i class="fab fa-pinterest"></i></a>
+                                <a href="#" class="social-btn"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AYUDA</h3>
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>INFORMACIÓN</h3>
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>SUBSCRÍBETE A NUESTRO CORREO</h3>
+                <input type="email" placeholder="Introduce tu correo">
+            </div>
+        </div>
+
+        <div class="payment-icons">
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-apple-pay"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-paypal"></i>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026, AZALEA</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/producto.js"></script>
+</body>
+</html>
