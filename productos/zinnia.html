@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZINNIA - AZALEA</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -25,15 +25,19 @@
                     </svg>
                 </button>
                 
-                <a href="../index.html" class="logo">AZALEA</a>            
-
+                <a href="index.html" class="logo">AZALEA</a>
+                
+                <div class="nav-icons" style="display: none;">
+                    <button>👤</button>
+                    <button>🛒</button>
+                </div>
             </div>
             
             <div class="nav-bottom">
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="../index.html">INICIO</a></li>
-                    <li><a href="../colecciones.html">COLECCIONES</a></li>
-                    <li><a href="../productos.html">PRODUCTOS</a></li>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="colecciones.html">COLECCIONES</a></li>
+                    <li><a href="productos.html">PRODUCTOS</a></li>
                     <li><a href="#contacto">CONTACTO</a></li>
                 </ul>
             </div>
@@ -50,14 +54,21 @@
         <div class="producto-container">
             <!-- Galería de imágenes -->
             <div class="producto-galeria">
-                <div class="imagen-principal">
+                <div class="imagen-principal" onclick="ampliarImagen()">
                     <img id="imagenPrincipal" src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_41.png?v=1765904455&width=533" alt="ZINNIA">
+                    <div class="zoom-icon">🔍</div>
                 </div>
                 <div class="imagenes-miniaturas">
-                    <img src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_41.png?v=1765904455&width=533" alt="ZINNIA vista 1" onclick="cambiarImagen(this)">
+                    <img src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_41.png?v=1765904455&width=533" alt="ZINNIA vista 1" onclick="cambiarImagen(this)" class="active">
                     <img src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_41.png?v=1765904455&width=533" alt="ZINNIA vista 2" onclick="cambiarImagen(this)">
                     <img src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_41.png?v=1765904455&width=533" alt="ZINNIA detalle" onclick="cambiarImagen(this)">
                 </div>
+            </div>
+
+            <!-- Modal para ampliar imagen -->
+            <div id="modalImagen" class="modal-imagen" onclick="cerrarModal()">
+                <span class="cerrar-modal">&times;</span>
+                <img id="imagenAmpliada" src="" alt="Imagen ampliada">
             </div>
 
             <!-- Información del producto -->
@@ -65,7 +76,7 @@
                 <p class="producto-coleccion">AZALEA</p>
                 <h1 class="producto-titulo">ZINNIA</h1>
                 <p class="producto-precio">€200,00 EUR</p>
-                <p class="producto-impuestos">Impuestos incluido.</p>
+                <p class="producto-impuestos">Impuesto incluido.</p>
 
                 <!-- Selector de cantidad -->
                 <div class="cantidad-selector">
@@ -79,9 +90,16 @@
 
                 <!-- Botones de compra -->
                 <div class="producto-botones">
-                    <button class="btn-agregar-carrito">Agregar al carrito</button>
-                    <button class="btn-paypal">Pagar con PayPal</button>
-                    <a href="#" class="link-mas-opciones">Más opciones de pago</a>
+                    <button class="btn-agregar-carrito">
+                        <span>Agregar al carrito</span>
+                    </button>
+                    <button class="btn-paypal">
+                        <svg width="80" height="20" viewBox="0 0 100 32" xmlns="http://www.w3.org/2000/svg">
+                            <text x="5" y="22" fill="currentColor" font-family="Verdana" font-size="18" font-weight="bold">Pay</text>
+                            <text x="40" y="22" fill="#009cde" font-family="Verdana" font-size="18" font-weight="bold">Pal</text>
+                        </svg>
+                    </button>
+                    <button class="link-mas-opciones">Más opciones de pago</button>
                 </div>
 
                 <!-- Desplegables de información -->
@@ -173,11 +191,11 @@
         </div>
 
         <div class="footer-bottom">
-            <p>© 2026, AZALEA</p>
+            <p>© 2026, AZALEA | Tecnología de tu propio servidor</p>
         </div>
     </footer>
 
-    <script src="../js/script.js"></script>
-    <script src="../js/producto.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/producto.js"></script>
 </body>
 </html>
