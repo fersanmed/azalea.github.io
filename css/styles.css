@@ -655,10 +655,10 @@
         }
         
         .imagen-principal img {
-            width: 100%;
-            height: 550px;
-            display: block;
-            object-fit: contain;
+            width: 100% !important;
+            height: 550px !important;
+            display: block !important;
+            object-fit: contain !important;
         }
         
         /* Lupa elegante en esquina */
@@ -712,12 +712,12 @@
         }
         
         .imagenes-miniaturas img {
-            width: 110px;
-            height: 110px;
-            object-fit: cover;
-            cursor: pointer;
-            border: 2px solid #e5e5e5;
-            transition: all 0.3s;
+            width: 110px; !important;
+            height: 110px; !important;
+            object-fit: cover; !important;
+            cursor: pointer; !important;
+            border: 2px solid #e5e5e5; !important;
+            transition: all 0.3s; !important;
         }
         
         .imagenes-miniaturas img:hover {
