@@ -660,6 +660,7 @@
             height: 550px !important;
             display: block !important;
             object-fit: contain !important;
+            border: 10px solid red !important;
         }
         
         /* Lupa elegante en esquina */
