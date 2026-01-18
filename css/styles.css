@@ -640,16 +640,14 @@
         .producto-galeria {
             position: sticky;
             top: 120px;
-            max-width: 400px;     /* ← Limita el ancho máximo */
-            margin-left: auto;
-            margin-right: auto;
+            width: 100%;
+            max-width: 550px;
+            margin: 0 auto;
         }
-        
         
         .imagen-principal {
             width: 100%;
-            max-width: 600px;      /* ← Máximo 600px de ancho */
-            margin: 0 auto 15px;   /* ← Centrada */
+            margin: 0 0 15px 0;
             overflow: hidden;
             position: relative;
             cursor: zoom-in;
@@ -658,9 +656,9 @@
         
         .imagen-principal img {
             width: 100%;
-            height: 500px;         /* ← Altura fija 500px */
+            height: 550px;
             display: block;
-            object-fit: contain;   /* o 'cover' si quieres que rellene */
+            object-fit: contain;
         }
         
         /* Lupa elegante en esquina */
@@ -705,20 +703,21 @@
             right: 12px;
         }
         
-        /* ___________Miniaturas pequeñas _________________________*/
+        /* Miniaturas */
         .imagenes-miniaturas {
             display: grid;
-            grid-template-columns: repeat(3, 100px);  /* ← 3 columnas de 100px cada una */
-            gap: 10px;
-            justify-content: center;  /* ← Centradas */
+            grid-template-columns: repeat(3, 110px);
+            gap: 12px;
+            justify-content: center;
         }
         
         .imagenes-miniaturas img {
-            width: 100px;          /* ← Ancho fijo 100px */
-            height: 100px;         /* ← Alto fijo 100px */
+            width: 110px;
+            height: 110px;
             object-fit: cover;
             cursor: pointer;
             border: 2px solid #e5e5e5;
+            transition: all 0.3s;
         }
         
         .imagenes-miniaturas img:hover {
@@ -748,8 +747,8 @@
         }
         
         .modal-imagen img {
-            max-width: 95%;
-            max-height: 95vh;
+            max-width: 90%;
+            max-height: 90vh;
             object-fit: contain;
             animation: zoomIn 0.3s;
         }
