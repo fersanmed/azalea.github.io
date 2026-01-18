@@ -641,7 +641,6 @@
         .producto-galeria {
             position: sticky;
             top: 120px;
-            width: 100%;
             max-width: 550px;
             margin: 0 auto;
         }
@@ -656,7 +655,7 @@
         }
         .producto-galeria .imagen-principal img,
         img#imagenPrincipal {
-            width: 100% !important;
+            width: 550px !important;
             height: 550px !important;
             display: block !important;
             object-fit: contain !important;
