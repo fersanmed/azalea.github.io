@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZINNIA - AZALEA</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="nav-top">
+                <button class="mobile-menu-btn" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <button class="search-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                
+                <a href="index.html" class="logo">AZALEA</a>
+                
+                <div class="nav-icons" style="display: none;">
+                    <button>👤</button>
+                    <button>🛒</button>
+                </div>
+            </div>
+            
+            <div class="nav-bottom">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="colecciones.html">COLECCIONES</a></li>
+                    <li><a href="productos.html">PRODUCTOS</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner encargos -->
+    <div class="top-bar">
+        <a href="#encargos">PARA ENCARGOS PERSONALIZADOS, CLICK AQUÍ</a>
+    </div>
+
+    <!-- Contenido del producto -->
+    <main class="producto-page">
+        <div class="producto-container">
+            <!-- Galería de imágenes -->
+            <div class="producto-galeria">
+                <div class="imagen-principal">
+                    <img id="imagenPrincipal" src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_41.png?v=1765904455&width=533" alt="ZINNIA">
+                </div>
+                <div class="imagenes-miniaturas">
+                    <img src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_41.png?v=1765904455&width=533" alt="ZINNIA vista 1" onclick="cambiarImagen(this)">
+                    <img src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_41.png?v=1765904455&width=533" alt="ZINNIA vista 2" onclick="cambiarImagen(this)">
+                    <img src="https://azalea-studio-art.com/cdn/shop/files/Diseno_sin_titulo_41.png?v=1765904455&width=533" alt="ZINNIA detalle" onclick="cambiarImagen(this)">
+                </div>
+            </div>
+
+            <!-- Información del producto -->
+            <div class="producto-info">
+                <p class="producto-coleccion">AZALEA</p>
+                <h1 class="producto-titulo">ZINNIA</h1>
+                <p class="producto-precio">€200,00 EUR</p>
+                <p class="producto-impuestos">Impuesto incluido.</p>
+
+                <!-- Selector de cantidad -->
+                <div class="cantidad-selector">
+                    <label>Cantidad</label>
+                    <div class="cantidad-controls">
+                        <button onclick="decrementarCantidad()">−</button>
+                        <input type="number" id="cantidad" value="1" min="1" readonly>
+                        <button onclick="incrementarCantidad()">+</button>
+                    </div>
+                </div>
+
+                <!-- Botones de compra -->
+                <div class="producto-botones">
+                    <button class="btn-agregar-carrito">Agregar al carrito</button>
+                    <button class="btn-paypal">Pagar con PayPal</button>
+                    <a href="#" class="link-mas-opciones">Más opciones de pago</a>
+                </div>
+
+                <!-- Desplegables de información -->
+                <div class="producto-desplegables">
+                    <!-- Descripción -->
+                    <div class="desplegable">
+                        <button class="desplegable-header" onclick="toggleDesplegable(this)">
+                            <span>DESCRIPCIÓN</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="desplegable-content">
+                            <p>Obra abstracta en tonos rosados y suaves que aportan luz y calidez al espacio. Ideal para ambientes tranquilos, luminosos y de estética contemporánea.</p>
+                            <p><strong>Pintado en Córdoba, España.</strong></p>
+                        </div>
+                    </div>
+
+                    <!-- Tamaño -->
+                    <div class="desplegable">
+                        <button class="desplegable-header" onclick="toggleDesplegable(this)">
+                            <span>TAMAÑO</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="desplegable-content">
+                            <p><strong>Dimensiones:</strong> 50 x 70 cm</p>
+                            <p><strong>Soporte:</strong> Lienzo sobre bastidor de madera</p>
+                        </div>
+                    </div>
+
+                    <!-- Marco -->
+                    <div class="desplegable">
+                        <button class="desplegable-header" onclick="toggleDesplegable(this)">
+                            <span>MARCO</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="desplegable-content">
+                            <p><strong>Marco incluido:</strong> Marco de madera natural</p>
+                            <p>El marco viene instalado y listo para colgar.</p>
+                        </div>
+                    </div>
+
+                    <!-- Compartir -->
+                    <div class="desplegable">
+                        <button class="desplegable-header" onclick="toggleDesplegable(this)">
+                            <span>Compartir</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="desplegable-content">
+                            <div class="compartir-botones">
+                                <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-btn"><i class="fab fa-pinterest"></i></a>
+                                <a href="#" class="social-btn"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AYUDA</h3>
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>INFORMACIÓN</h3>
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>SUBSCRÍBETE A NUESTRO CORREO</h3>
+                <input type="email" placeholder="Introduce tu correo">
+            </div>
+        </div>
+
+        <div class="payment-icons">
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-apple-pay"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-paypal"></i>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026, AZALEA | Tecnología de tu propio servidor</p>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/producto.js"></script>
+</body>
+</html>
