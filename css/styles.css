@@ -653,8 +653,7 @@
             cursor: zoom-in;
             border: 1px solid #e5e5e5;
         }
-        .producto-galeria .imagen-principal img,
-        img#imagenPrincipal {
+        .imagen-principal img {
             width: 550px !important;
             height: 550px !important;
             display: block !important;
