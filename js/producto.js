@@ -12,6 +12,31 @@ function cambiarImagen(miniatura) {
     miniatura.classList.add('active');
 }
 
+// Ampliar imagen en modal
+function ampliarImagen() {
+    const modal = document.getElementById('modalImagen');
+    const imagenAmpliada = document.getElementById('imagenAmpliada');
+    const imagenPrincipal = document.getElementById('imagenPrincipal');
+    
+    modal.style.display = 'flex';
+    imagenAmpliada.src = imagenPrincipal.src;
+    document.body.style.overflow = 'hidden';
+}
+
+// Cerrar modal
+function cerrarModal() {
+    const modal = document.getElementById('modalImagen');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Cerrar modal con tecla ESC
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        cerrarModal();
+    }
+});
+
 // Incrementar cantidad
 function incrementarCantidad() {
     const input = document.getElementById('cantidad');
@@ -26,16 +51,25 @@ function decrementarCantidad() {
     }
 }
 
-// Toggle desplegables
+// Toggle desplegables - ARREGLADO
 function toggleDesplegable(button) {
     const desplegable = button.parentElement;
     const content = desplegable.querySelector('.desplegable-content');
     const icon = button.querySelector('i');
     
+    // Cerrar otros desplegables abiertos
+    document.querySelectorAll('.desplegable.active').forEach(item => {
+        if (item !== desplegable) {
+            item.classList.remove('active');
+            item.querySelector('.desplegable-content').style.maxHeight = '0';
+            item.querySelector('i').style.transform = 'rotate(0deg)';
+        }
+    });
+    
     // Toggle clase active
     desplegable.classList.toggle('active');
     
-    // Rotar icono
+    // Animar
     if (desplegable.classList.contains('active')) {
         icon.style.transform = 'rotate(180deg)';
         content.style.maxHeight = content.scrollHeight + 'px';
