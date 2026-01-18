@@ -520,7 +520,7 @@
             }
 
                 /* Ocultar productos extra en móvil */
-                @media (max-width: 768px) {
+
                     .product-card:nth-child(n+5) {
                         display: none;
                     }
@@ -528,7 +528,7 @@
                     .products-grid.expanded .product-card {
                         display: block;
                     }
-                }
+            }
                 
                 /* Botón Ver más */
                 .ver-mas-btn {
