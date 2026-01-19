@@ -1378,3 +1378,51 @@
         margin-bottom: 40px;
     }
 }
+/* ========================================
+   PÁGINAS DE COLECCIONES INDIVIDUALES
+   ======================================== */
+
+.coleccion-individual-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 50px;
+}
+
+.coleccion-individual-container h1 {
+    font-family: 'Cormorant', serif;
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.coleccion-descripcion {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+/* El .products-grid ya existe en tu CSS, así que no lo duplicamos */
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .coleccion-individual-page {
+        padding: 40px 20px;
+    }
+
+    .coleccion-individual-container h1 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .coleccion-descripcion {
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+}
