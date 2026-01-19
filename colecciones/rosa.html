@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colección Rosa - AZALEA</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="nav-top">
+                <button class="mobile-menu-btn" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <button class="search-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                
+                <a href="../index.html" class="logo">AZALEA</a>
+            </div>
+            
+            <div class="nav-bottom">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="../colecciones.html">COLECCIONES</a></li>
+                    <li><a href="../productos.html">PRODUCTOS</a></li>
+                    <li><a href="../contacto.html">CONTACTO</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner encargos -->
+    <div class="top-bar">
+        <a href="../contacto.html">PARA ENCARGOS PERSONALIZADOS, CLICK AQUÍ</a>
+    </div>
+
+    <!-- Contenido de colección -->
+    <main class="coleccion-individual-page">
+        <div class="coleccion-individual-container">
+            <h1>Colección Rosa</h1>
+            <p class="coleccion-descripcion">Obras en tonos rosados y suaves que aportan calidez y luminosidad a cualquier espacio.</p>
+            
+            <!-- Grid de productos -->
+            <div class="products-grid">
+                
+                <!-- Producto 1: ZINNIA -->
+                <a href="productos/zinnia.html" class="product-card">
+                    <img src="../images/zinnia - mockupd3.jpg" alt="ZINNIA" class="product-image">
+                    <div class="product-info">
+                        <div class="product-title">ZINNIA</div>
+                        <div class="product-price">€200,00 EUR</div>
+                    </div>
+                </a>
+
+                <!-- Producto 2: LIRIO -->
+                <a href="../productos/lirio.html" class="product-card">
+                    <img src="https://azalea-studio-art.com/cdn/shop/files/MOCKUPSESPACIOS.png?v=1759251882&width=533" alt="LIRIO" class="product-image">
+                    <div class="product-info">
+                        <div class="product-title">LIRIO</div>
+                        <div class="product-price">€750,00 EUR</div>
+                    </div>
+                </a>
+
+                <!-- Producto 3: DALIA -->
+                <a href="../productos/dalia.html" class="product-card">
+                    <img src="https://azalea-studio-art.com/cdn/shop/files/Disenosintitulo_46.png?v=1759418714&width=533" alt="DALIA" class="product-image">
+                    <div class="product-info">
+                        <div class="product-title">DALIA</div>
+                        <div class="product-price">€200,00 EUR</div>
+                    </div>
+                </a>
+
+                <!-- Producto 4: ADELFA -->
+                <a href="../productos/adelfa.html" class="product-card">
+                    <img src="https://azalea-studio-art.com/cdn/shop/files/Elsa_Schiaparelli_Italian_fashion_designer_brought_the_ideas_of_surrealist_painters_into_fashion_and_in_1931_introduced_a_new_color_shocking_pink_a_blend_of_magenta_with_a_touch_of_wh.png?v=1765481958&width=533" alt="ADELFA" class="product-image">
+                    <div class="product-info">
+                        <div class="product-title">ADELFA</div>
+                        <div class="product-price">€300,00 EUR</div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AYUDA</h3>
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>INFORMACIÓN</h3>
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>SUBSCRÍBETE A NUESTRO CORREO</h3>
+                <input type="email" placeholder="Introduce tu correo">
+            </div>
+        </div>
+
+        <div class="payment-icons">
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-apple-pay"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-paypal"></i>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026, AZALEA</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
