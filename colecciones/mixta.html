@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colección Mixta - AZALEA</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="nav-top">
+                <button class="mobile-menu-btn" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <button class="search-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                
+                <a href="../index.html" class="logo">AZALEA</a>
+            </div>
+            
+            <div class="nav-bottom">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="../colecciones.html">COLECCIONES</a></li>
+                    <li><a href="../productos.html">PRODUCTOS</a></li>
+                    <li><a href="../contacto.html">CONTACTO</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner encargos -->
+    <div class="top-bar">
+        <a href="../contacto.html">PARA ENCARGOS PERSONALIZADOS, CLICK AQUÍ</a>
+    </div>
+
+    <!-- Contenido de colección -->
+    <main class="coleccion-individual-page">
+        <div class="coleccion-individual-container">
+            <h1>Colección Mixta</h1>
+            <p class="coleccion-descripcion">Obras que combinan múltiples tonalidades para crear composiciones vibrantes y únicas.</p>
+            
+            <!-- Grid de productos -->
+            <div class="products-grid">
+                
+                <!-- Producto 1: HORIZON -->
+                <a href="productos/horizon.html" class="product-card">
+                    <img src="https://azalea-studio-art.com/cdn/shop/files/Sintitulo-1.jpg?v=1765910911&width=533" alt="HORIZON" class="product-image">
+                    <div class="product-info">
+                        <div class="product-title">HORIZON</div>
+                        <div class="product-price">€200,00 EUR</div>
+                    </div>
+                </a>
+
+                <!-- Producto 2: IPOMEA -->
+                <a href="productos/ipomea.html" class="product-card">
+                    <div class="sold-out">AGOTADO</div>
+                    <img src="https://azalea-studio-art.com/cdn/shop/files/PHOTO-2025-11-09-17-59-23.jpg?v=1765903924&width=533" alt="IPOMEA" class="product-image">
+                    <div class="product-info">
+                        <div class="product-title">IPOMEA</div>
+                        <div class="product-price">€400,00 EUR</div>
+                    </div>
+                </a>
+
+                <!-- Producto 3: ANDROMEDA -->
+                <a href="productos/andromeda.html" class="product-card">
+                    <img src="https://azalea-studio-art.com/cdn/shop/files/Disenosintitulo.jpg?v=1765475925&width=533" alt="ANDROMEDA" class="product-image">
+                    <div class="product-info">
+                        <div class="product-title">ANDROMEDA</div>
+                        <div class="product-price">€500,00 EUR</div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AYUDA</h3>
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>INFORMACIÓN</h3>
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>SUBSCRÍBETE A NUESTRO CORREO</h3>
+                <input type="email" placeholder="Introduce tu correo">
+            </div>
+        </div>
+
+        <div class="payment-icons">
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-apple-pay"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-paypal"></i>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026, AZALEA</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
