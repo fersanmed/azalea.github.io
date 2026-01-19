@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas frecuentes - AZALEA</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="nav-top">
+                <button class="mobile-menu-btn" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <button class="search-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                
+                <a href="index.html" class="logo">AZALEA</a>
+            </div>
+            
+            <div class="nav-bottom">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="colecciones.html">COLECCIONES</a></li>
+                    <li><a href="productos.html">PRODUCTOS</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner encargos -->
+    <div class="top-bar">
+        <a href="contacto.html">PARA ENCARGOS PERSONALIZADOS, CLICK AQUÍ</a>
+    </div>
+
+    <!-- Contenido FAQ -->
+    <main class="faq-page">
+        <div class="faq-container">
+            <h1>Preguntas frecuentes</h1>
+            
+            <!-- Sección General -->
+            <section class="faq-section">
+                <h2>General</h2>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Qué es Azalea?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Azalea es un estudio creativo donde cada obra nace de una mezcla entre intuición, color y emoción. Transformo fotografías, ideas y momentos en piezas artísticas únicas, diseñadas para llenar espacios con alma.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Qué métodos de pago aceptáis?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aceptamos tarjetas de débito y crédito Visa y Mastercard.</p>
+                        <p>También podrás pagar mediante los métodos disponibles en tu región a través de Shopify Checkout.</p>
+                        <p>Fácil, rápido y totalmente seguro.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Cómo puedo regalar una obra a alguien?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Si quieres sorprender a alguien con arte, ya tienes mi admiración.</p>
+                        <p>Solo introduce la dirección de envío de la persona afortunada durante el proceso de compra.</p>
+                        <p>¿No sabes todavía qué elegir? No pasa nada: puedes optar por una <strong>Tarjeta Regalo Digital</strong> para que esa persona elija la pieza que más le emocione.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Ofrecéis precios para profesionales o compras al por mayor?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí. Colaboramos con interioristas, hoteles, espacios comerciales y proyectos corporativos que buscan arte con carácter.</p>
+                        <p>Si quieres decorar un espacio con obras de Azalea o necesitas un volumen mayor, utiliza el formulario de contacto y te prepararemos una propuesta a medida.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Pedidos -->
+            <section class="faq-section">
+                <h2>Pedidos</h2>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Cuánto tardará en llegar mi pedido?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Normalmente, tu obra llegará en un plazo aproximado de <strong>6 a 10 días laborables</strong> desde que realizas la compra.</p>
+                        <p>Todos los envíos salen desde Córdoba, España.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Puedo cancelar mi pedido?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Preparamos los pedidos para que salgan normalmente en menos de 24 horas.</p>
+                        <p>Si necesitas modificar o cancelar tu compra, contáctanos <strong>lo antes posible</strong> para ver si aún estamos a tiempo de detener el proceso.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Por qué no he recibido el correo de confirmación?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Primero, revisa tu bandeja de <strong>correo no deseado</strong>.</p>
+                        <p>El email de confirmación puede tardar hasta <strong>5 horas</strong> después de realizar tu compra.</p>
+                        <p>Tu número de seguimiento se enviará en un plazo máximo de <strong>24 horas</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Dónde está mi pedido?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Si tu pedido no ha llegado dentro del plazo estimado, revisa primero el <strong>número de seguimiento</strong> que te enviamos por email.</p>
+                        <p>¿Sigues sin localizarlo? Escríbenos y lo solucionamos personalmente.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Envíos y devoluciones -->
+            <section class="faq-section">
+                <h2>Envíos y devoluciones</h2>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Cuánto cuesta el envío?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ofrecemos <strong>envío gratuito</strong> en pedidos a España superiores a <strong>250€</strong>.</p>
+                        <p>Para pedidos inferiores a esa cantidad, aplicamos una tarifa fija de envío que podrás ver durante el proceso de compra.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Qué métodos de envío utilizáis?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Trabajamos con servicios de mensajería fiables dentro de España y la Unión Europea para garantizar que cada obra llegue en perfecto estado.</p>
+                        <p>En función del formato elegido:</p>
+                        <ul>
+                            <li>Las obras <strong>enrolladas en tubo</strong> viajan con protección reforzada.</li>
+                            <li>Las obras <strong>montadas en bastidor o enmarcadas</strong> se envían en embalaje rígido y seguro para evitar golpes o deformaciones.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Realizáis envíos internacionales?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, realizamos pedidos a todo el mundo.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Cómo funcionan las devoluciones o cambios por daño?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Si tu obra ha sufrido algún daño durante el transporte, debes avisarnos dentro de los <strong>3 días posteriores a la recepción del pedido</strong>.</p>
+                        <p>Solo tienes que <strong>contactarnos</strong> con tu número de pedido y fotografías del daño, y nos encargaremos del resto.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AYUDA</h3>
+                <ul>
+                    <li><a href="faq.html">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>INFORMACIÓN</h3>
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>SUBSCRÍBETE A NUESTRO CORREO</h3>
+                <input type="email" placeholder="Introduce tu correo">
+            </div>
+        </div>
+
+        <div class="payment-icons">
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-apple-pay"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-paypal"></i>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026, AZALEA</p>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/faq.js"></script>
+</body>
+</html>
