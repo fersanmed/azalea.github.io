@@ -88,7 +88,7 @@
             font-family: 'Cormorant', serif;
             font-size: 38px;
             font-weight: 100;
-            letter-spacing: 2px;
+            letter-spacing: 0px;
             color: #EFDBE8;
             text-decoration: none;
         }
@@ -99,6 +99,7 @@
             list-style: none;
             font-family: 'Quicksand', sans-serif;
             font-weight: 200;
+            letter-spacing: 0px;
             margin: 0;
         }
 
@@ -132,7 +133,7 @@
 
         /* Hero Section */
         .hero {
-            background-image: url('../images/zinnia - mockupd3.jpg');
+            background-image: url('../images/zinnia/zinnia - mockupd3.jpg');
             background-size: cover;
             background-position: center;
             padding: 100px 50px;
